@@ -1,0 +1,20 @@
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |sf| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= sf.label :name %>
+        <%= sf.text_field :name %>
+        <%= sf.label :email %>
+        <%= sf.email_field :email %>
+        <%= sf.label :password %>
+        <%= sf.password_field :password %>
+        <%= sf.label :password_confirmation, "Password Confirmation" %>
+        <%= sf.password_field :password_confirmation %>
+        <%= sf.submit "Create Account", class: "btn btn-primary" %>
+        <p>Have an account? <%= link_to "Login", login_path %></p>
+    <% end %>
+  </div>
+</div>
