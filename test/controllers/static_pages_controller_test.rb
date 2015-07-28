@@ -36,9 +36,5 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "title" , "Search | #{@base_title}"
   end
 
-  test "should get login" do
-    get :login
-    assert_response :success
-    assert_select "title" , "Login | #{@base_title}"
-  end
+
 end
