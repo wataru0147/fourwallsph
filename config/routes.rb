@@ -5,16 +5,16 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
-  root                 'static_pages#home'
-  get 'home'      =>   'static_pages#home'
-  get 'search'    =>   'static_pages#search'
-  get 'help'      =>   'static_pages#help'
-  get 'about'     =>   'static_pages#about'
-  get 'contactus' =>   'static_pages#contactus'
-  get 'signup'    =>   'users#new'
-  get 'login'     => 'sessions#new'
-  post 'login'    => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  root                    'static_pages#home'
+  get    'home'      =>   'static_pages#home'
+  get    'search'    =>   'static_pages#search'
+  get    'help'      =>   'static_pages#help'
+  get    'about'     =>   'static_pages#about'
+  get    'contactus' =>   'static_pages#contactus'
+  get    'signup'    =>   'users#new'
+  get    'login'     =>   'sessions#new'
+  post   'login'     =>   'sessions#create'
+  delete 'logout'    =>   'sessions#destroy'
 
   resources :users
 
