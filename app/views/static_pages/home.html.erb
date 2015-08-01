@@ -2,7 +2,14 @@
   <h1>Welcome to the 4WallsPH</h1>
   <h2>
     This is the home page for the 4WallsPH a website for house-hunters</h2>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+
+  <% if logged_in? %>
+
+  <% else %>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
+
+
   </div>
 <!--end jumbotron-->
 
